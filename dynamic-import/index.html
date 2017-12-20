@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf8" />
+    <title>dynamic import</title>
+  </head>
+  <body>
+    <h1><code>dynamic import</code></h1>
+    <script type="module">
+    import('./index.mjs').then(ns => console.log('from module', { ns }));
+    </script>
+    <script type="application/javascript">
+    import('./index.mjs').then(ns => console.log('from script', { ns }));
+    </script>
+  </body>
+</html>
